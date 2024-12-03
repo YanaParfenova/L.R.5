@@ -27,9 +27,11 @@ def F_iterative(n):
     F_n = 1
     minus = -1
     factorial = 1
+    factorial_2n = 1
     for i in range(2, n + 1):
         factorial *= i
-        F_n = minus * (F_1 / factorial - F_0 / (factorial * i))
+        factorial_2n *= (2 * i - 1) * 2 * i
+        F_n = minus * (F_1 / factorial - F_0 / factorial_2n)
         F_0, F_1 = F_1, F_n
         minus *=-1
 
