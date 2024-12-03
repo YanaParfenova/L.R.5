@@ -31,6 +31,7 @@ def F_iterative(n):
         factorial *= i
         F_n = minus * (F_1 / factorial - F_0 / (factorial * i))
         F_0, F_1 = F_1, F_n
+        minus *=-1
 
     return F_n
 
